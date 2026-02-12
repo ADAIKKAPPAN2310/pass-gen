@@ -1,0 +1,207 @@
+<!doctype html>
+<html class="dark" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pass Gen</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="bg-overlay">
+      <div class="blob-1"></div>
+      <div class="blob-2"></div>
+      <div class="blob-3"></div>
+    </div>
+    <main>
+      <div class="header">
+        <div class="icon-container">
+          <span class="material-icons-round header-icon">lock</span>
+        </div>
+        <h1 class="header-title">
+          Pass Gen
+        </h1>
+        <p class="header-subtitle">
+          Generate unbreakable passwords instantly.
+        </p>
+      </div>
+      <div class="glass-card card-content-spacing">
+        <div class="password-display-group">
+          <label class="password-label">Generated Password</label>
+          <div class="password-input-wrapper">
+            <input
+              class="glass-input password-input"
+              readonly=""
+              type="text"
+              value="S7$k#9Lp@x2M!vR"
+            />
+            <button
+              class="copy-btn"
+              title="Copy to Clipboard"
+            >
+              <span class="material-icons-round text-xl">content_copy</span>
+            </button>
+          </div>
+          <div class="strength-container">
+            <div class="strength-bar-bg">
+              <div
+                class="strength-bar-fill"
+              ></div>
+            </div>
+            <span
+              class="strength-text mono-text-glow"
+              >Very Strong</span
+            >
+          </div>
+        </div>
+        <div class="settings-space">
+          <div>
+            <div class="length-header">
+              <label class="length-label"
+                >Password Length</label
+              >
+              <span
+                class="length-value"
+                >16</span
+              >
+            </div>
+            <div class="slider-container">
+              <input
+                class="range-slider"
+                max="32"
+                min="6"
+                type="range"
+                value="16"
+              />
+              <div
+                class="range-track-filled"
+              ></div>
+              <div
+                class="range-track-empty"
+              ></div>
+            </div>
+            <div
+              class="slider-labels"
+            >
+              <span>6</span>
+              <span>32</span>
+            </div>
+          </div>
+          <div class="options-grid">
+            <div
+              class="option-card"
+            >
+              <div class="option-info">
+                <span
+                  class="material-icons-round option-icon"
+                  >text_fields</span
+                >
+                <span class="option-label"
+                  >Uppercase</span
+                >
+              </div>
+              <label class="toggle-label-wrapper">
+                <input
+                  checked=""
+                  class="sr-only"
+                  type="checkbox"
+                  value=""
+                />
+                <div class="toggle-bg"></div>
+              </label>
+            </div>
+            <div
+              class="option-card"
+            >
+              <div class="option-info">
+                <span
+                  class="material-icons-round option-icon"
+                  >text_format</span
+                >
+                <span class="option-label"
+                  >Lowercase</span
+                >
+              </div>
+              <label class="toggle-label-wrapper">
+                <input
+                  checked=""
+                  class="sr-only"
+                  type="checkbox"
+                  value=""
+                />
+                <div class="toggle-bg"></div>
+              </label>
+            </div>
+            <div
+              class="option-card"
+            >
+              <div class="option-info">
+                <span
+                  class="material-icons-round option-icon"
+                  >tag</span
+                >
+                <span class="option-label">Numbers</span>
+              </div>
+              <label class="toggle-label-wrapper">
+                <input
+                  checked=""
+                  class="sr-only"
+                  type="checkbox"
+                  value=""
+                />
+                <div class="toggle-bg"></div>
+              </label>
+            </div>
+            <div
+              class="option-card"
+            >
+              <div class="option-info">
+                <span
+                  class="material-icons-round option-icon"
+                  >emoji_symbols</span
+                >
+                <span class="option-label">Symbols</span>
+              </div>
+              <label class="toggle-label-wrapper">
+                <input
+                  checked=""
+                  class="sr-only"
+                  type="checkbox"
+                  value=""
+                />
+                <div class="toggle-bg"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <button
+          class="generate-btn mono-glow"
+        >
+          <span
+            class="material-icons-round btn-icon"
+            >sync</span
+          >
+          <span>Generate Password</span>
+        </button>
+        <div class="footer">
+          <p class="footer-text">
+            Your password is generated locally on your device.
+          </p>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
