@@ -40,17 +40,22 @@
       </div>
       <div class="glass-card card-content-spacing">
         <div class="password-display-group">
-          <label class="password-label">Generated Password</label>
+          <label class="password-label" for="passwordInput">Generated Password</label>
           <div class="password-input-wrapper">
             <input
               class="glass-input password-input"
+              id="passwordInput"
               readonly=""
               type="text"
               value="S7$k#9Lp@x2M!vR"
+              aria-live="polite"
             />
             <button
               class="copy-btn"
+              id="copyBtn"
               title="Copy to Clipboard"
+              type="button"
+              aria-label="Copy password to clipboard"
             >
               <span class="material-icons-round text-xl">content_copy</span>
             </button>
@@ -59,10 +64,12 @@
             <div class="strength-bar-bg">
               <div
                 class="strength-bar-fill"
+                id="strengthFill"
               ></div>
             </div>
             <span
               class="strength-text mono-text-glow"
+              id="strengthText"
               >Very Strong</span
             >
           </div>
@@ -70,27 +77,32 @@
         <div class="settings-space">
           <div>
             <div class="length-header">
-              <label class="length-label"
+              <label class="length-label" for="lengthSlider"
                 >Password Length</label
               >
               <span
                 class="length-value"
+                id="lengthValue"
                 >16</span
               >
             </div>
             <div class="slider-container">
               <input
                 class="range-slider"
+                id="lengthSlider"
                 max="32"
                 min="6"
                 type="range"
                 value="16"
+                aria-label="Password length"
               />
               <div
                 class="range-track-filled"
+                id="rangeTrackFilled"
               ></div>
               <div
                 class="range-track-empty"
+                id="rangeTrackEmpty"
               ></div>
             </div>
             <div
@@ -101,8 +113,9 @@
             </div>
           </div>
           <div class="options-grid">
-            <div
+            <label
               class="option-card"
+              for="optUppercase"
             >
               <div class="option-info">
                 <span
@@ -113,18 +126,20 @@
                   >Uppercase</span
                 >
               </div>
-              <label class="toggle-label-wrapper">
+              <div class="toggle-label-wrapper">
                 <input
                   checked=""
                   class="sr-only"
                   type="checkbox"
+                  id="optUppercase"
                   value=""
                 />
                 <div class="toggle-bg"></div>
-              </label>
-            </div>
-            <div
+              </div>
+            </label>
+            <label
               class="option-card"
+              for="optLowercase"
             >
               <div class="option-info">
                 <span
@@ -135,18 +150,20 @@
                   >Lowercase</span
                 >
               </div>
-              <label class="toggle-label-wrapper">
+              <div class="toggle-label-wrapper">
                 <input
                   checked=""
                   class="sr-only"
                   type="checkbox"
+                  id="optLowercase"
                   value=""
                 />
                 <div class="toggle-bg"></div>
-              </label>
-            </div>
-            <div
+              </div>
+            </label>
+            <label
               class="option-card"
+              for="optNumbers"
             >
               <div class="option-info">
                 <span
@@ -155,18 +172,20 @@
                 >
                 <span class="option-label">Numbers</span>
               </div>
-              <label class="toggle-label-wrapper">
+              <div class="toggle-label-wrapper">
                 <input
                   checked=""
                   class="sr-only"
                   type="checkbox"
+                  id="optNumbers"
                   value=""
                 />
                 <div class="toggle-bg"></div>
-              </label>
-            </div>
-            <div
+              </div>
+            </label>
+            <label
               class="option-card"
+              for="optSymbols"
             >
               <div class="option-info">
                 <span
@@ -175,20 +194,23 @@
                 >
                 <span class="option-label">Symbols</span>
               </div>
-              <label class="toggle-label-wrapper">
+              <div class="toggle-label-wrapper">
                 <input
                   checked=""
                   class="sr-only"
                   type="checkbox"
+                  id="optSymbols"
                   value=""
                 />
                 <div class="toggle-bg"></div>
-              </label>
-            </div>
+              </div>
+            </label>
           </div>
         </div>
         <button
           class="generate-btn mono-glow"
+          id="generateBtn"
+          type="button"
         >
           <span
             class="material-icons-round btn-icon"
@@ -196,6 +218,7 @@
           >
           <span>Generate Password</span>
         </button>
+        <p class="sr-only" id="copyStatus" aria-live="polite"></p>
         <div class="footer">
           <p class="footer-text">
             Your password is generated locally on your device.
@@ -203,5 +226,6 @@
         </div>
       </div>
     </main>
+    <script src="script.js" defer></script>
   </body>
 </html>
