@@ -28,19 +28,20 @@
     </div>
     <main>
       <div class="header">
-        <div class="icon-container">
-          <span class="material-icons-round header-icon">lock</span>
+        <div class="header-flex">
+          <div class="icon-container">
+            <span class="material-icons-round header-icon">lock</span>
+          </div>
+          <h1 class="header-title">Pass Gen</h1>
         </div>
-        <h1 class="header-title">
-          Pass Gen
-        </h1>
-        <p class="header-subtitle">
-          Generate unbreakable passwords instantly.
-        </p>
+
+        <p class="header-subtitle">Generate unbreakable passwords instantly.</p>
       </div>
       <div class="glass-card card-content-spacing">
         <div class="password-display-group">
-          <label class="password-label" for="passwordInput">Generated Password</label>
+          <label class="password-label" for="passwordInput"
+            >Generated Password</label
+          >
           <div class="password-input-wrapper">
             <input
               class="glass-input password-input"
@@ -50,6 +51,7 @@
               value="S7$k#9Lp@x2M!vR"
               aria-live="polite"
             />
+            <span class="copied-msg" id="copiedMsg">Copied!</span>
             <button
               class="copy-btn"
               id="copyBtn"
@@ -62,14 +64,9 @@
           </div>
           <div class="strength-container">
             <div class="strength-bar-bg">
-              <div
-                class="strength-bar-fill"
-                id="strengthFill"
-              ></div>
+              <div class="strength-bar-fill" id="strengthFill"></div>
             </div>
-            <span
-              class="strength-text mono-text-glow"
-              id="strengthText"
+            <span class="strength-text mono-text-glow" id="strengthText"
               >Very Strong</span
             >
           </div>
@@ -80,11 +77,7 @@
               <label class="length-label" for="lengthSlider"
                 >Password Length</label
               >
-              <span
-                class="length-value"
-                id="lengthValue"
-                >16</span
-              >
+              <span class="length-value" id="lengthValue">16</span>
             </div>
             <div class="slider-container">
               <input
@@ -96,35 +89,21 @@
                 value="16"
                 aria-label="Password length"
               />
-              <div
-                class="range-track-filled"
-                id="rangeTrackFilled"
-              ></div>
-              <div
-                class="range-track-empty"
-                id="rangeTrackEmpty"
-              ></div>
+              <div class="range-track-filled" id="rangeTrackFilled"></div>
+              <div class="range-track-empty" id="rangeTrackEmpty"></div>
             </div>
-            <div
-              class="slider-labels"
-            >
+            <div class="slider-labels">
               <span>6</span>
               <span>32</span>
             </div>
           </div>
           <div class="options-grid">
-            <label
-              class="option-card"
-              for="optUppercase"
-            >
+            <label class="option-card" for="optUppercase">
               <div class="option-info">
-                <span
-                  class="material-icons-round option-icon"
+                <span class="material-icons-round option-icon"
                   >text_fields</span
                 >
-                <span class="option-label"
-                  >Uppercase</span
-                >
+                <span class="option-label">Uppercase</span>
               </div>
               <div class="toggle-label-wrapper">
                 <input
@@ -137,18 +116,12 @@
                 <div class="toggle-bg"></div>
               </div>
             </label>
-            <label
-              class="option-card"
-              for="optLowercase"
-            >
+            <label class="option-card" for="optLowercase">
               <div class="option-info">
-                <span
-                  class="material-icons-round option-icon"
+                <span class="material-icons-round option-icon"
                   >text_format</span
                 >
-                <span class="option-label"
-                  >Lowercase</span
-                >
+                <span class="option-label">Lowercase</span>
               </div>
               <div class="toggle-label-wrapper">
                 <input
@@ -161,15 +134,9 @@
                 <div class="toggle-bg"></div>
               </div>
             </label>
-            <label
-              class="option-card"
-              for="optNumbers"
-            >
+            <label class="option-card" for="optNumbers">
               <div class="option-info">
-                <span
-                  class="material-icons-round option-icon"
-                  >tag</span
-                >
+                <span class="material-icons-round option-icon">tag</span>
                 <span class="option-label">Numbers</span>
               </div>
               <div class="toggle-label-wrapper">
@@ -183,13 +150,9 @@
                 <div class="toggle-bg"></div>
               </div>
             </label>
-            <label
-              class="option-card"
-              for="optSymbols"
-            >
+            <label class="option-card" for="optSymbols">
               <div class="option-info">
-                <span
-                  class="material-icons-round option-icon"
+                <span class="material-icons-round option-icon"
                   >emoji_symbols</span
                 >
                 <span class="option-label">Symbols</span>
@@ -207,15 +170,8 @@
             </label>
           </div>
         </div>
-        <button
-          class="generate-btn mono-glow"
-          id="generateBtn"
-          type="button"
-        >
-          <span
-            class="material-icons-round btn-icon"
-            >sync</span
-          >
+        <button class="generate-btn mono-glow" id="generateBtn" type="button">
+          <span class="material-icons-round btn-icon">sync</span>
           <span>Generate Password</span>
         </button>
         <p class="sr-only" id="copyStatus" aria-live="polite"></p>

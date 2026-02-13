@@ -2,6 +2,7 @@
   const passwordInput = document.getElementById("passwordInput");
   const copyBtn = document.getElementById("copyBtn");
   const copyStatus = document.getElementById("copyStatus");
+  const copiedMsg = document.getElementById("copiedMsg");
   const lengthSlider = document.getElementById("lengthSlider");
   const lengthValue = document.getElementById("lengthValue");
   const trackFilled = document.getElementById("rangeTrackFilled");
@@ -127,6 +128,7 @@
       await navigator.clipboard.writeText(textToCopy);
       copyStatus.textContent = "Password copied.";
       copyBtn.title = "Copied";
+      copiedMsg.classList.add("visible");
     } catch {
       passwordInput.focus();
       passwordInput.select();
@@ -137,6 +139,7 @@
     window.setTimeout(() => {
       copyBtn.title = "Copy to Clipboard";
       copyStatus.textContent = "";
+      copiedMsg.classList.remove("visible");
     }, 1200);
   }
 

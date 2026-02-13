@@ -138,6 +138,13 @@ main {
     margin-bottom: 2rem;
 }
 
+.header-flex{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
 .icon-container {
     display: inline-flex;
     align-items: center;
@@ -242,6 +249,29 @@ main {
 .copy-btn:hover {
     color: var(--white);
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+.copied-msg {
+    position: absolute;
+    right: 3.5rem;
+    top: 50%;
+    transform: translateY(-50%) translateX(10px);
+    background-color: var(--slate-800);
+    color: var(--accent-silver);
+    padding: 0.25rem 0.75rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+    border: 1px solid var(--slate-600);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.copied-msg.visible {
+    opacity: 1;
+    transform: translateY(-50%) translateX(0);
 }
 
 .copy-btn:focus-visible,
@@ -564,7 +594,7 @@ input:checked ~ .toggle-bg::after {
 
 .header-icon {
     color: var(--slate-200);
-    font-size: 1.875rem;
+    font-size: 1.2rem;
 }
 
 /* Responsive Media Queries */
